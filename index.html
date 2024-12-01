@@ -7,31 +7,51 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-     
+    
     <div class="container">
         <header>
-            <img src="img/logo.PNG" alt="Logo" class="logo">
+            <img src="Main Logo (9).png" style="width: 200px;" alt="Logo" class="logo">
         </header>
         
         <div class="form-container">
             <h2>Sign Up</h2>
-            <form id="signupForm">
-                <input type="text" placeholder="Name" required>
-                <input type="tel" placeholder="Phone Number" required>
-                <input type="email" placeholder="Email" required>
-                <input type="text" placeholder="Address" required>
-                <input type="text" placeholder="Gender" required>
-                <input type="password" placeholder="Password" required>
-                <input type="password" placeholder="Confirm Password" required>
-                <button type="submit" class="signup-btn">Sign Up</button>
+            <form id="signUpForm">
+                <input type="text" id="username" placeholder="Name*" required>
+                <p class="error" id="usernameError"> </p>
+
+                
+                <input type="text" id="phone" placeholder="Phone Number*" required>
+                 
+                <!-- <span id="phoneError" class="error"></span> -->
+
+                <input type="email" id="email" placeholder="Email*" required>
+                <p class="error" id="emailError"></p>
+                
+                <input type="text" id="address" placeholder="Address*" required>
+                
+                <div class="input-group">
+                    <select id="gender" required>
+                        <option value="">Select Gender*</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                    <span id="genderError" class="error"></span>
+                </div>
+    
+                <input type="password" id="password" placeholder="Password*" required>
+                <p class="error" id="passwordError"></p>
+                
+                <input type="password" id="confirmPassword" placeholder="Confirm Password*" required>
+                <p class="error" id="confirmPasswordError"></p>
+                
+                <button type="submit">Sign Up</button>
             </form>
-            <p class="login-link">Already have an account? <a href="login.html">Login</a></p>
+            <p class="login-link">Already have account? <a href="login.html">Login</a></p>
         </div>
-    </div>
 
 
 
-   
+
 
 
     <script src="index.js"></script>
